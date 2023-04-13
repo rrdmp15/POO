@@ -5,38 +5,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Kavivanar&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
 </head>
 <body>
+    <h1>Crear Lapiz</h1>
     <form id="form">
-        <fieldset>
-            <legend>Clase Lapiz</legend>
-            <label>Color</label>
-            <input type="color" name="color" placeholder="Color del lapiz">
-            <label for="">Dimension</label>
-            <input type="range" name="dimension">
-            <fieldset>
-                <legend>Marca</legend>
-                <input type="radio" name="marca" value="Mongol"><label>Mongol</label>
-                <input type="radio" name="marca" value="Norma"><label>Norma</label>
-                <input type="radio" name="marca" value="Fabel Castle"><label>Fabel Castle</label>
-                <input type="radio" name="marca" value="Big"><label>Big</label>
-            </fieldset>
-            <fieldset>
-                <legend>Borrador</legend>
-                <input type="radio" name="borrador" value="Tiene"><label>Tiene</label>
-                <input type="radio" name="borrador" value="No Tiene"><label>No tiene</label>
-            </fieldset>
-            <fieldset>
-                <legend>Material</legend>
-                <input type="radio" name="material" value="Madera"><label>Madera</label>
-                <input type="radio" name="material" value="Goma"><label>Goma</label>
-            </fieldset>
-            <input type="submit">
-        </fieldset>
+        <div class="containersection">
+            <h2>Clase Lapiz</h2>
+            <div class="color-container">    
+                <label>Color</label>
+                <input type="color" name="color" placeholder="Color del lapiz" id="color">
+            </div>
+
+            <div>    
+                <label>Dimension</label>
+                <div class="slidecontainer">
+                    <input type="range" name="dimension" class="drag__bar">
+                </div>
+            </div>    
+        </div>
+
+        <div class="containersection"> 
+            <h2>Marca</h2>
+            <label class="container">Mongol
+                <input type="radio" name="marca" value="Mongol">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container">Norma
+                <input type="radio" name="marca" value="Norma">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container">Fabel Castle
+                <input type="radio" name="marca" value="Fabel Castle">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container">Bic
+                <input type="radio" name="marca" value="Bic">
+                <span class="checkmark"></span>
+            </label>
+        </div> 
+
+        <div class="containersection">  
+        <h2>Borrador</h2>
+        <label class="container">Tiene
+            <input type="radio" name="borrador" value="Tiene">
+            <span class="checkmark"></span>
+        </label>
+
+        <label class="container">No Tiene
+            <input type="radio" name="borrador" value="No Tiene">
+            <span class="checkmark"></span>
+        </label>
+        </div>
+
+        <div class="containersection">   
+        <h2>Material</h2>
+        <label class="container">Madero
+            <input type="radio" name="material" value="Madera">
+            <span class="checkmark"></span>
+        </label>
+
+        <label class="container">Goma
+            <input type="radio" name="material" value="Goma">
+            <span class="checkmark"></span>
+        </label>
+        </div>
+
+        <input type="submit" value="Enviar" class="submit">
+        
     </form>
-    <br><br><br>
-    <table border="solid">
+    
+    <table class="tabla">
         <thead>
             <tr>
                 <th>Color</th>

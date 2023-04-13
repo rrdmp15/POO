@@ -40,7 +40,7 @@ class Lapiz{
         return this.dimension;
     }
     getMarca(){
-        return this.marca;
+        return this.#marca;
     }
     getBorrador(){
         return this.borrador;
@@ -53,7 +53,7 @@ class Lapiz{
         let plantilla = "";
         plantilla += `
         <tr>
-            <td>${this._color}</td>
+            <td style="background-color:${this._color};" class="celdaColor">${this._color}</td>
             <td>${this._dimension}</td>
             <td>${this._marca}</td>
             <td>${this._borrador}</td>
